@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6WLS5Q6DH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-K6WLS5Q6DH');
+  </script>
+
+  <meta charset="utf-8">
+  <title>GymBar - WeHo</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="https://images.augmentyourworld.com/branding/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://images.augmentyourworld.com/branding/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://images.augmentyourworld.com/branding/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://images.augmentyourworld.com/branding/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://images.augmentyourworld.com/branding/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://images.augmentyourworld.com/branding/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://images.augmentyourworld.com/branding/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://images.augmentyourworld.com/branding/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://images.augmentyourworld.com/branding/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://images.augmentyourworld.com/branding/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://images.augmentyourworld.com/branding/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://images.augmentyourworld.com/branding/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://images.augmentyourworld.com/branding/favicon-16x16.png">
+  <link rel="manifest" href="https://s3.amazonaws.com/imageshare-augmentyourworld.com/branding/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#000000">
+
+  <!-- We've included a slightly modified version of A-Frame, which fixes some polish concerns -->
+  <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
+
+  <!-- XR Extras - provides utilities like load screen, almost there, and error handling.
+         See github.com/8thwall/web/tree/master/xrextras -->
+  <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
+
+  <!-- 8thWall Web - Replace the app key here with your own app key -->
+  <script async src="https://apps.8thwall.com/xrweb?appKey=2lVSqYOQW121vrrJ0wEvwunxLlQaGMD6vxzZ9MqwPpQSNDaDetAbOvN2RvBiG4uagbc3P3"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+  <script type="module" src="raycaster.js"></script>
+
+  <script type="module" src="app.js"></script>
+
+
+
+</head>
+
+
+<body>
+
+
+  <button id="redo-button" class="toggle" type="button" onClick="window.location.reload();"><img src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/branding/deletekey.png" width="100%" height="100%"> </button>
+  <button id="swap-cam-btn" class="toggle"><img src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/branding/cameraswapblue.png" width="100%" height="100%"></button>
+
+  <!--GDRP BUTTONS-->
+  <div id="gdrpbuttons" class="gdrpbar">
+    <button id="accept-button" class="gdrp">Close and Accept. This website uses cookies<br> to ensure you get the best experience on our website.</button>
+    <button id="decline-button" class="gdrp" type="button" onclick="parent.open('https://augmentyourworld.com/terms-privacy/','_blank');">Decline/Learn More</button>
+  </div>
+  <script>
+    document.getElementById("accept-button").onclick = function() {
+      document.getElementById("gdrpbuttons").remove();
+    }
+  </script>
+
+  <a-scene scenereality-loaded cursor="rayOrigin: mouse; fuse: false" raycaster="objects: [clickhandler];" xrextras-almost-there xrextras-runtime-error xrextras-pause-on-hidden swap-camera xrextras-loading="
+   loadBackgroundColor: #007AFF;
+   cameraBackgroundColor: #5AC8FA;
+   loadImage: #myCustomImage;
+   loadAnimation: none" xrface="disableWorldTracking: false; mirroredDisplay: true;  meshGeometry: eyes, face, mouth; cameraDirection: front; allowedDevices: any;">
+
+    <a-assets>
+      <img id="card0" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card0.png" crossorigin="anonymous">
+      <img id="card1" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card1.png" crossorigin="anonymous">
+      <img id="card2" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card2.png" crossorigin="anonymous">
+      <img id="card3" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card3.png" crossorigin="anonymous">
+      <img id="card4" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card4.png" crossorigin="anonymous">
+      <img id="card5" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card5.png" crossorigin="anonymous">
+      <img id="card6" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card6.png" crossorigin="anonymous">
+      <img id="card7" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card7.png" crossorigin="anonymous">
+      <img id="card8" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card8.png" crossorigin="anonymous">
+      <img id="card9" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card9.png" crossorigin="anonymous">
+      <img id="card10" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card10.png" crossorigin="anonymous">
+      <img id="card11" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card11.png" crossorigin="anonymous">
+      <img id="card12" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card12.png" crossorigin="anonymous">
+      <img id="footer" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/FF-Footer.png" crossorigin="anonymous">
+      <img id="beer" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/modelo-beer.png" crossorigin="anonymous">
+      <img id="endcard" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/FF-Bumper.png" crossorigin="anonymous">
+      <img id="myCustomImage" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/branding/SocialMediaLogo-HomePage-512.png" crossorigin="anonymous">
+
+    </a-assets>
+
+    <a-camera "rayOrigin: mouse" look-controls="enabled: false" wasd-controls="enabled: false" position="0 0 3">
+    </a-camera>
+
+
+
+    <a-entity hello-world></a-entity>
+    <xrextras-capture-button capture-mode="fixed"></xrextras-capture-button>
+
+    <xrextras-capture-config max-duration-ms="9000" max-dimension="1280" enable-end-card="true" cover-image-url="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/FF-Bumper.png" end-card-call-to-action="Follow Us"
+      short-link="@gymsportbarandgrillweho" footer-image-url="" watermark-image-url="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/FF-Footer.png" watermark-max-width="200" watermark-max-height="20" watermark-location="bottomLeft"
+      file-name-prefix="amw-" configureAudioOutput="false" requestMicrophone="true">
+    </xrextras-capture-config>
+
+    <xrextras-capture-preview action-button-share-text="Share" action-button-view-text="View" finalize-text="Exporting..."></xrextras-capture-preview>
+
+
+    <xrextras-faceanchor>
+
+
+      <xrextras-face-attachment point="forehead">
+
+
+        <a-plane id="cards" src="#card0" clickhandler position="0 .5 0" scale="1.2 1.2 1.2" side="double" depth-write="false" opacity="1" rotation="0 -180 0" background="#fff" transparent="true" roughness="0.25">
+        </a-plane>
+
+      </xrextras-face-attachment>
+
+      <xrextras-face-attachment point="lowerLip">
+        <a-entity>
+          <a-plane id="lowerimage" src="#beer" position="-.45 -.4 0" scale=".5 1 .5" side=" double" depth-write="false" opacity="1" rotation="0 -180 30" background="#fff" transparent="true" roughness="0.25">
+          </a-plane>
+        </a-entity>
+
+      </xrextras-face-attachment>
+
+    </xrextras-faceanchor>
+
+
+    <!--<a-light type="directional" target="#face" position="0 1.2 3" intensity="0.4"></a-light>-->
+    <a-light type="ambient" intensity="1"></a-light>
+
+
+  </a-scene>
+</body>
+
+</html>
