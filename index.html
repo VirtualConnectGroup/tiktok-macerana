@@ -76,35 +76,19 @@
    loadBackgroundColor: #007AFF;
    cameraBackgroundColor: #5AC8FA;
    loadImage: #myCustomImage;
-   loadAnimation: none" xrface="disableWorldTracking: false; mirroredDisplay: true;  meshGeometry: eyes, face, mouth; cameraDirection: front; allowedDevices: any;">
+   loadAnimation: none" xrweb="disableWorldTracking: false; mirroredDisplay: false;  meshGeometry: eyes, face, mouth; cameraDirection: back; allowedDevices: any;">
 
     <a-assets>
-      <img id="card0" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card0.png" crossorigin="anonymous">
-      <img id="card1" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card1.png" crossorigin="anonymous">
-      <img id="card2" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card2.png" crossorigin="anonymous">
-      <img id="card3" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card3.png" crossorigin="anonymous">
-      <img id="card4" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card4.png" crossorigin="anonymous">
-      <img id="card5" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card5.png" crossorigin="anonymous">
-      <img id="card6" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card6.png" crossorigin="anonymous">
-      <img id="card7" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card7.png" crossorigin="anonymous">
-      <img id="card8" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card8.png" crossorigin="anonymous">
-      <img id="card9" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card9.png" crossorigin="anonymous">
-      <img id="card10" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card10.png" crossorigin="anonymous">
-      <img id="card11" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card11.png" crossorigin="anonymous">
-      <img id="card12" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/card12.png" crossorigin="anonymous">
       <img id="footer" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/FF-Footer.png" crossorigin="anonymous">
-      <img id="beer" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/modelo-beer.png" crossorigin="anonymous">
+      <a-asset-item id="boymacerana" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/3dmodels/Macarena-Boy.glb"></a-asset-item>
       <img id="endcard" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/FF-Bumper.png" crossorigin="anonymous">
       <img id="myCustomImage" src="https://s3.amazonaws.com/imageshare-augmentyourworld.com/branding/SocialMediaLogo-HomePage-512.png" crossorigin="anonymous">
 
     </a-assets>
 
-    <a-camera "rayOrigin: mouse" look-controls="enabled: false" wasd-controls="enabled: false" position="0 0 3">
+    <a-camera "rayOrigin: mouse" look-controls="enabled: false" wasd-controls="enabled: false" position="0 0 0">
     </a-camera>
 
-
-
-    <a-entity hello-world></a-entity>
     <xrextras-capture-button capture-mode="fixed"></xrextras-capture-button>
 
     <xrextras-capture-config max-duration-ms="9000" max-dimension="1280" enable-end-card="true" cover-image-url="https://s3.amazonaws.com/imageshare-augmentyourworld.com/gymbar/FF-Bumper.png" end-card-call-to-action="Follow Us"
@@ -114,28 +98,7 @@
 
     <xrextras-capture-preview action-button-share-text="Share" action-button-view-text="View" finalize-text="Exporting..."></xrextras-capture-preview>
 
-
-    <xrextras-faceanchor>
-
-
-      <xrextras-face-attachment point="forehead">
-
-
-        <a-plane id="cards" src="#card0" clickhandler position="0 .5 0" scale="1.2 1.2 1.2" side="double" depth-write="false" opacity="1" rotation="0 -180 0" background="#fff" transparent="true" roughness="0.25">
-        </a-plane>
-
-      </xrextras-face-attachment>
-
-      <xrextras-face-attachment point="lowerLip">
-        <a-entity>
-          <a-plane id="lowerimage" src="#beer" position="-.45 -.4 0" scale=".5 1 .5" side=" double" depth-write="false" opacity="1" rotation="0 -180 30" background="#fff" transparent="true" roughness="0.25">
-          </a-plane>
-        </a-entity>
-
-      </xrextras-face-attachment>
-
-    </xrextras-faceanchor>
-
+    <a-entity gltf-model="#boymacerana" animation-mixer rotation="-45 80 0" position="0 .3 .5"></a-entity>
 
     <!--<a-light type="directional" target="#face" position="0 1.2 3" intensity="0.4"></a-light>-->
     <a-light type="ambient" intensity="1"></a-light>
