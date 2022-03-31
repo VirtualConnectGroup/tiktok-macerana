@@ -45,7 +45,7 @@
   <script async src="https://apps.8thwall.com/xrweb?appKey=rYWReJOs2CeqnGCQgVH23WS06dJqEWrWsg8WlGLzGkTgsQmaAmmEHouqB7R4SsR5ozHiuM"></script>
 
 
-  <!-- <script type="module" src="raycaster.js"></script> -->
+  <script type="module" src="app.js"></script>
 
 
 
@@ -53,7 +53,9 @@
 
 
 <body>
-
+  <div id="nextbutton" style="display: none; z-index: 10">
+    <h2>Next Animation</h2>
+  </div>
 
   <a-scene next-button cursor="rayOrigin: mouse; fuse: false" raycaster="objects: [clickhandler];" xrextras-almost-there xrextras-runtime-error xrextras-pause-on-hidden swap-camera xrextras-loading="
    loadBackgroundColor: #007AFF;
@@ -69,7 +71,7 @@
 
     </a-assets>
 
-    <a-camera "rayOrigin: mouse" look-controls="enabled: false" wasd-controls="enabled: false" position="0 0 0">
+    <a-camera "rayOrigin: mouse" look-controls="enabled: false" wasd-controls="enabled: false" position="3 0 0">
     </a-camera>
 
     <xrextras-capture-button capture-mode="fixed"></xrextras-capture-button>
@@ -81,7 +83,7 @@
 
     <xrextras-capture-preview action-button-share-text="Share" action-button-view-text="View" finalize-text="Exporting..."></xrextras-capture-preview>
 
-    <a-entity gltf-model="#boymacerana" animation-mixer rotation="-45 80 0" position="0 .3 .5"></a-entity>
+    <a-entity gltf-model="#boymacerana" animation-mixer scale=".02 .02 .02" position="8 2 -9"></a-entity>
 
     <!--<a-light type="directional" target="#face" position="0 1.2 3" intensity="0.4"></a-light>-->
     <a-light type="ambient" intensity="1"></a-light>
